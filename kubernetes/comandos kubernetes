@@ -1,5 +1,10 @@
-componentes do control plane:
-kube api server / kube scheduler / etcd / kube controller manager
+#componentes do control plane:
+#kube api server / kube scheduler / etcd / kube controller manager
+#com o replicaset você tera resiliencia quando seu pod for deletado automaticamente será recriado outro
+#com o replicas você tera a escalabilidade tera a quantidade de pods que solicitar caso um caia sera recriado outro
+#o versionamento ocorre quando você altera o manifesto do deploy e aplica novamente
+
+
 
 kubectl get nodes -->> ver os nós do cluster
 kubectl apply -f **.yaml --->> executa um arquivo .yaml
@@ -8,6 +13,6 @@ kubectl get pods -o wide -->> verifica todas as informações dos pods
 kubectl port-forward pod(tipo)/meupod(nome) 8080:80 (porta externa)(porta do pod)
 kubectl delete pod meupod(nome do pod) -->> deleta o pod
 kubectl get pods -l(labels) app=(nome) ----> exibe os pods que estiverem com essa labes
+kubectl rollout history deployment meudeployment(nome do manifesto) -->> vertifica historico de atualizações
+kubectl rollout undo deployment meudeployment(nome do manifesto) ----> retorna a versão anterior do deploy
 
-com o replicaset você tera resiliencia quando seu pod for deletado automaticamente será recriado outro
- 
