@@ -1,0 +1,16 @@
+docker container run  ----->> executa uma imagem 
+docker container run -it -->> entra no modo interativo
+docker container run -d --->> deixa o container em modo daemon (ficar rodando sem travar o terminal)
+docker container run --name -->> informa o nome do container
+docker container run -p --->> 8080:80 (8080 maquina externa 80 porta do container) informa a porta para redirecionar e poder acessar por outro compputador 
+docker container run -e --->> variavel de hambiente 
+####exemplo######
+docker container run --postgre teste -d -p5432:5432 -e POSTGRES_DB=test -e POSTGRES_USER=marcus -e POSTGRES_PASSWORD=123456 postgres
+#################
+
+docker container ls ------->> lista container ativos (UP)
+docker container ls -a ---->> lista container que ja foram executado
+docker container rm (nome ou id do container) ------>> remove o container
+#não remove container em execução.
+docker stop (id ou nome) ---->> pausa o container
+docker rm -f (id ou nome) --->> apaga o container forçado

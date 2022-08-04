@@ -1,0 +1,13 @@
+componentes do control plane:
+kube api server / kube scheduler / etcd / kube controller manager
+
+kubectl get nodes -->> ver os nós do cluster
+kubectl apply -f **.yaml --->> executa um arquivo .yaml
+kubectl get pods ou po -->> verifica os pods do cluster
+kubectl get pods -o wide -->> verifica todas as informações dos pods
+kubectl port-forward pod(tipo)/meupod(nome) 8080:80 (porta externa)(porta do pod)
+kubectl delete pod meupod(nome do pod) -->> deleta o pod
+kubectl get pods -l(labels) app=(nome) ----> exibe os pods que estiverem com essa labes
+
+com o replicaset você tera resiliencia quando seu pod for deletado automaticamente será recriado outro
+ 
