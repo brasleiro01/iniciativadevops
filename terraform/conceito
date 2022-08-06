@@ -1,0 +1,14 @@
+conceitos:
+bloco de resource -->> criando algum elemento (vm, cluster, firewall)
+ex-> (bloco) "tipo" "valores"
+
+bloco provider --> plugin de conexão entre o cloud provider e o terraform
+bloco setings -->> definições e configurações do terraform
+variables -->> determinar valores diferentes 
+output -->> capturar informações do projeto depois que for executado
+
+###############comandos###################
+terraform init -->>>> inicia o terraform
+terraform apply --->>> executa o arquivo para criar a iac
+terraform output --->> exibe apenas o output
+terraform destroy --->> destroi todo o projeto 
