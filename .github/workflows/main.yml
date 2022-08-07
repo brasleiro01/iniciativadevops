@@ -31,7 +31,7 @@ jobs:
         uses: docker/build-push-action@v3.1.1
         with:
           file: iniciativadevops/kubernetes/src/Dockerfile
-          context: iniciativadevops/kubernetes/src
+          context: iniciativadevops/kubernetes/src/
           push: true
           tags: |
             vinnioliver66/kube-news:latest
